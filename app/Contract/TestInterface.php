@@ -23,4 +23,9 @@ interface TestInterface
      * @descritption: this ust Pratice purpose method
      */
     public static function hello(string $name): string;
+
+    /**
+     * @proprties void $any
+     */
+    public function display(): void;
 }

@@ -41,4 +41,9 @@ class App implements TestInterface {
         return "Hello {$name}";
     } 
 
+    public function display () : void
+    {
+        print_r();
+    }
+
 }
