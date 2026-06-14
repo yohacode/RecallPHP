@@ -5,5 +5,7 @@ use App\Core\Test;
 
 include_once __DIR__ . "/../vendor/autoload.php";
 
+$t = new Test();
 
-// dd(App::hello("Nati"), App::hello("Aman!!!!"), Test::greet("John Joe."));
+
+

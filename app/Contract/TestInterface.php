@@ -2,6 +2,8 @@
 
 namespace App\Contract;
 
+use App\Core\App;
+
 
 interface TestInterface
 {
@@ -16,6 +18,8 @@ interface TestInterface
      */
     public string $test {get; set;}
 
+    public string $p_name {set;}
+
     public static function greet ( string $name ): string|null;
 
     /**
@@ -28,4 +32,9 @@ interface TestInterface
      * @proprties void $any
      */
     public function display(): void;
+
+    /**
+     * Method which returns App Class
+     */
+    public function App() : App;
 }

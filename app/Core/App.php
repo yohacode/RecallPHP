@@ -3,15 +3,15 @@
 namespace App\Core;
 
 use App\Attribute\Route;
-use App\Contract\TestInterface;
 use ReflectionClass;
 
 
-class App implements TestInterface {
+class App 
+{
 
     // const A = "Const From Aman IPQC.";
 
-    public string $test = '';
+    public string $test = 'This is string from App class.';
 
     public static function hello(string $name): string
     {
@@ -22,17 +22,18 @@ class App implements TestInterface {
     {
         $classes = get_declared_classes();
 
-        // dd($classes);
-
 
         foreach ($classes as $className) {
             $reflection = new ReflectionClass($className);
+            $routes = [];
 
             foreach ($reflection->getAttributes() as $attribute) {
-                if ($attribute->getName() === Route::class) {
-                    return $className;
-                }
+                // if ($attribute->getName() === Route::class) {
+                    $routes[$className] = $attribute;
+                // }
             }
+
+            return $routes;
         }
     }
 
