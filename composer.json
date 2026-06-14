@@ -1,0 +1,12 @@
+{
+    "name": "admin/yp",
+    "require-dev": {
+        "symfony/var-dumper": "*"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
