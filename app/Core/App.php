@@ -36,7 +36,6 @@ class App implements TestInterface {
         }
     }
 
-
     public static function greet ( string $name) : string|null 
     {
         return null;
