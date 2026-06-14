@@ -2,9 +2,9 @@
 
 namespace App\Core;
 
-use App\Contract\TestInterface;
+use App\Abstracts\TestAbstract;
 
-class Test implements TestInterface
+class Test extends TestAbstract
 {
     // const A = "Const From Aman";
     public string $test = 'null';
@@ -16,6 +16,6 @@ class Test implements TestInterface
 
     public static function greet ( string $name) : string|null 
     {
-        return null;
+        return "Hello from TEST $name";
     } 
 }
